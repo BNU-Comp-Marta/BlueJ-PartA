@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Course
+comment0.text=\r\n\ This\ class\ contains\ information\ about\ the\r\n\ course\ title\ and\ its\ course\ code\r\n\r\n\ @author\ Marta\ Cyrn\r\n\ @version\ 0.2\ 8/10/2020\r\n
+comment1.params=title\ code
+comment1.target=Course(java.lang.String,\ java.lang.String)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Course\r\n
+comment2.params=
+comment2.target=void\ print()
+numComments=3

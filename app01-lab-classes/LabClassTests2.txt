@@ -1,0 +1,9 @@
+Course course1 = new Course("Games Development", "G525");
+course1.print();
+Course: Games Development, Code G525
+Student student1 = new Student("Marta", "66875");
+Course course1 = new Course("Games Development", "G525");
+student1.addCourse(course1);
+student1.print();
+Marta, student ID: 66875, credits: 0
+Course: Games Development, Code G525
