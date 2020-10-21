@@ -9,7 +9,7 @@
  * @author David J. Barnes and Michael Kölling
  * @version 2016.02.29
  * 
- * Modified by Student Name
+ * Modified by Marta Cyrn
  */
 public class TicketMachine
 {
@@ -23,13 +23,27 @@ public class TicketMachine
     /**
      * Create a machine that issues tickets of the given price.
      */
-    public TicketMachine(int cost)
+    public TicketMachine(int ticketCost)
     {
-        price = cost;
+        price = ticketCost;
         balance = 0;
         total = 0;
     }
 
+    /**
+     * This allows customers to pick 
+     * what ticket they would like to buy
+     */
+    
+    public void destination(String stop)
+    {
+        if (stop == "Aylesbury")
+        {
+        
+        }
+        
+    }
+    
     /**
      * @Return The price of a ticket.
      */

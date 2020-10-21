@@ -1,4 +1,4 @@
-
+import java.util.Date;
 /**
  * This class will include general information
  * about tickets e.g. prices.
@@ -13,34 +13,52 @@ public class Ticket
  // this is in pounds
  private int price;
  
+ private Date datePurchased = new Date();
+ 
     /**
-     * Constructor for prices of tickets 
-     * and their destinations for class Ticket
+     * Information about destination and price
+     *
      */
     public Ticket()
     {
         price = 220;
         destination = "Aylesbury";
+        datePurchased = new Date();
     }
     
     /**
-     * 
+     * Constructor of tickets information
      */
     public Ticket (String destination, int price)
     {
         this.price = price;
         this.destination = destination;
-        
+        datePurchased = new Date();
     }
     
    
     /**
-     * A method that allows to
-     * print the prices
+     * A constructor that gives a ticket the price
+     * 
      */
-    public void setPrice (int price)
+    public int getPrice (int price)
     {
-        this.price = price;
+        return price;
     }
     
+    /**
+     * A constructor that informs about destination
+     * 
+     */
+    public String getDestination()
+    {
+        return destination;
+    }
+    
+    public void print()
+    {
+        System.out.print("Destination: " + destination);
+        System.out.println(" Price " + price + " pounds");
+    }
+
 }
