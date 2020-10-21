@@ -19,11 +19,11 @@ public class TicketMachine
     private int balance;
     // The total amount of money collected by this machine.
     private int total;
-    
+    //first ticket's destination
    private Ticket ticketToAylesbury = new Ticket();
-   
+   //second ticket's destination
    private Ticket ticketToAmersham = new Ticket();
-   
+   //third ticket's destination
    private Ticket ticketToHighWycombe = new Ticket();
    
 
@@ -40,7 +40,7 @@ public class TicketMachine
 
     
     /**
-     * 
+     * This creates all the tickets available to buy
      */
     private void createTickets()
     {
@@ -48,21 +48,6 @@ public class TicketMachine
         ticketToAmersham = new Ticket("Amersham" , 300);
         ticketToHighWycombe = new Ticket("HighWycombe" , 330);
         //add two more tickets
-        
-    }
-    
-    
-    /**
-     * This allows customers to pick 
-     * what ticket they would like to buy
-     */
-    
-    public void destination(String stop)
-    {
-        if (stop == "Aylesbury")
-        {
-        
-        }
         
     }
     
@@ -141,4 +126,17 @@ public class TicketMachine
         balance = 0;
         return amountToRefund;
     }
+    
+   /**
+    * This allows to print every ticket
+    */
+    public void printAllTickets()
+   {
+       System.out.println();
+       ticketToAylesbury.print();
+       ticketToAmersham.print();
+       ticketToHighWycombe.print();
+       
+    }
+   
 }

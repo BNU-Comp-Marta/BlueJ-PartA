@@ -12,7 +12,7 @@ public class Ticket
  
  // this is in pounds
  private int price;
- 
+ //allows to see the date of ticket
  private Date datePurchased = new Date();
  
     /**
@@ -62,7 +62,10 @@ public class Ticket
     {
         return destination;
     }
-    
+    /**
+     * Allows to show the destination 
+     * and prices of each ticket
+     */
     public void print()
     {
         System.out.print("Destination: " + destination);
