@@ -19,17 +19,39 @@ public class TicketMachine
     private int balance;
     // The total amount of money collected by this machine.
     private int total;
+    
+   private Ticket ticketToAylesbury = new Ticket();
+   
+   private Ticket ticketToAmersham = new Ticket();
+   
+   private Ticket ticketToHighWycombe = new Ticket();
+   
 
     /**
-     * Create a machine that issues tickets of the given price.
+     * Creates a machine that issues tickets with the given price.
      */
-    public TicketMachine(int ticketCost)
+    public TicketMachine(int cost)
     {
-        price = ticketCost;
+        price = cost;
         balance = 0;
         total = 0;
+        createTickets();
     }
 
+    
+    /**
+     * 
+     */
+    private void createTickets()
+    {
+        ticketToAylesbury = new Ticket("Aylesbury" , 220);
+        ticketToAmersham = new Ticket("Amersham" , 300);
+        ticketToHighWycombe = new Ticket("HighWycombe" , 330);
+        //add two more tickets
+        
+    }
+    
+    
     /**
      * This allows customers to pick 
      * what ticket they would like to buy
