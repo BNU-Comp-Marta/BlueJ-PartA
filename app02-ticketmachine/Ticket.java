@@ -14,11 +14,33 @@ public class Ticket
  private int price;
  
     /**
-     * Constructor for objects of class Ticket
+     * Constructor for prices of tickets 
+     * and their destinations for class Ticket
      */
     public Ticket()
     {
-        price = 0;
+        price = 220;
+        destination = "Aylesbury";
     }
-
+    
+    /**
+     * 
+     */
+    public Ticket (String destination, int price)
+    {
+        this.price = price;
+        this.destination = destination;
+        
+    }
+    
+   
+    /**
+     * A method that allows to
+     * print the prices
+     */
+    public void setPrice (int price)
+    {
+        this.price = price;
+    }
+    
 }
