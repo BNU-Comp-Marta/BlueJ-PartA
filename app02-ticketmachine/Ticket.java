@@ -8,12 +8,17 @@
  */
 public class Ticket
 {
-
+ private String destination;
+ 
+ // this is in pounds
+ private int price;
+ 
     /**
      * Constructor for objects of class Ticket
      */
     public Ticket()
     {
+        price = 0;
     }
 
 }
