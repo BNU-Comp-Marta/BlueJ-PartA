@@ -1,7 +1,7 @@
 
 /**
- * This class will include information
- * about prices of tickets.
+ * This class will include general information
+ * about tickets e.g. prices.
  *
  * @author Marta Cyrn
  * @version 0.1 19.10.2020
