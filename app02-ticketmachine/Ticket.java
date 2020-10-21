@@ -8,11 +8,12 @@ import java.util.Date;
  */
 public class Ticket
 {
+    //Attributes
  private String destination;
  
- // this is in pounds
- private int price;
- //allows to see the date of ticket
+ // this is in pence
+ public int price;
+ 
  private Date datePurchased = new Date();
  
     /**
@@ -62,14 +63,19 @@ public class Ticket
     {
         return destination;
     }
+    
     /**
      * Allows to show the destination 
      * and prices of each ticket
      */
     public void print()
     {
-        System.out.print("Destination: " + destination);
-        System.out.println(" Price " + price + " pounds");
+        System.out.println("##################");
+        System.out.println("# the BlueJ line");
+        System.out.println("#Ticket: " + destination);
+        System.out.println(" Price " + price + " pence");
+        System.out.println("##################");
+        
     }
 
 }
