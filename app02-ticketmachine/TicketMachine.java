@@ -15,17 +15,10 @@ public class TicketMachine
     private int total;
     
     private int currentBalance;
-    
-   //first ticket's destination
-   private Ticket ticketToAylesbury = new Ticket();
-   //second ticket's destination
-   private Ticket ticketToAmersham = new Ticket();
-   //third ticket's destination
-   private Ticket ticketToHighWycombe = new Ticket();
    
    private Ticket aylesburyTicket;
    
-   private Ticket highwycombeTicket;
+   private Ticket highWycombeTicket;
    
    private Ticket amershamTicket;
    
@@ -42,7 +35,7 @@ public class TicketMachine
         createTickets();
         
         aylesburyTicket = new Ticket("Aylesbury", 220);
-        highwycombeTicket = new Ticket("High Wycombe", 220);
+        highWycombeTicket = new Ticket("High Wycombe", 220);
         amershamTicket = new Ticket("Amersham", 300);
         
         selectedTicket = null;
@@ -54,9 +47,9 @@ public class TicketMachine
      */
     private void createTickets()
     {
-        ticketToAylesbury = new Ticket("Aylesbury" , 220);
-        ticketToAmersham = new Ticket("Amersham" , 300);
-        ticketToHighWycombe = new Ticket("HighWycombe" , 330);
+        aylesburyTicket = new Ticket("Aylesbury" , 220);
+        amershamTicket = new Ticket("Amersham" , 300);
+        highWycombeTicket = new Ticket("HighWycombe" , 330);
         
     }
     
@@ -121,8 +114,8 @@ public class TicketMachine
     {
         if (stop == "High Wycombe" || stop == "highwycombe")
         {
-            selectedTicket = highwycombeTicket;
-            price = highwycombeTicket.price;
+            selectedTicket = highWycombeTicket;
+            price = highWycombeTicket.price;
             System.out.println("High Wycombe Selected");
             
         }
@@ -161,11 +154,7 @@ public class TicketMachine
         
         {
             // Simulate the printing of a ticket.
-            System.out.println("##################");
-            System.out.println("# The BlueJ Line");
-            System.out.println("# Ticket");
-            System.out.println("# " + price + " pence.");
-            System.out.println("##################");
+            selectedTicket.print();
             System.out.println("currentBalance");
             System.out.println();
 
@@ -222,9 +211,9 @@ else
     private void printAllTickets()
    {
        System.out.println();
-       ticketToAylesbury.print();
-       ticketToAmersham.print();
-       ticketToHighWycombe.print();
+       aylesburyTicket.print();
+       amershamTicket.print();
+       highWycombeTicket.print();
        
     }
    

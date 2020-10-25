@@ -15,25 +15,6 @@ public class Ticket
  public int price;
  
  private Date datePurchased = new Date();
- 
-    /**
-     * Information about destination and price
-     *
-     */
-    public Ticket ()
-    {
-        price = 220;
-        destination = "Aylesbury";
-        datePurchased = new Date();
-    
-        price = 300;
-        destination = "Amersham";
-        datePurchased = new Date();
-        
-        price = 330;
-        destination = "HighWycombe";
-        datePurchased = new Date();
-    }
     
     /**
      * Constructor of tickets information
