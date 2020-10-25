@@ -31,7 +31,7 @@ public class Ticket
      * A constructor that gives a ticket the price
      * 
      */
-    public int getPrice (int price)
+    public int getPrice ()
     {
         return price;
     }

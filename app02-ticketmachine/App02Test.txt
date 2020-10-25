@@ -1,0 +1,52 @@
+TicketMachine ticketMa1 = new TicketMachine();
+ticketMa1.insert10p();
+ticketMa1.insert50p();
+ticketMa1.insert100p();
+ticketMa1.insert200p();
+ticketMa1.selectDestination("Aylesbury");
+Aylesbury Selected
+ticketMa1.printTicket();
+##################
+# the BlueJ line
+#Ticket: Aylesbury
+ Price 220 pence
+##################
+currentBalance
+
+ticketMa1.selectDestination("Amersham");
+Amersham Selected
+ticketMa1.printTicket();
+You must insert at least: 160 more pence.
+ticketMa1.insert100p();
+ticketMa1.insert50p();
+ticketMa1.printTicket();
+You must insert at least: 10 more pence.
+ticketMa1.insert10p();
+ticketMa1.printTicket();
+##################
+# the BlueJ line
+#Ticket: Amersham
+ Price 300 pence
+##################
+currentBalance
+
+ticketMa1.selectDestination("High Wycombe");
+High Wycombe Selected
+ticketMa1.printTicket();
+You must insert at least: 220 more pence.
+ticketMa1.insert200p();
+ticketMa1.insert10p();
+ticketMa1.insert10p();
+ticketMa1.printTicket();
+##################
+# the BlueJ line
+#Ticket: High Wycombe
+ Price 220 pence
+##################
+currentBalance
+
+ticketMa1.refundBalance()
+    returned int 0
+ticketMa1.insert10p();
+ticketMa1.refundBalance()
+    returned int 10

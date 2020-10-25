@@ -27,9 +27,8 @@ public class TicketMachine
     /**
      * Creates a machine that issues tickets with the given price.
      */
-    public TicketMachine(int cost)
+    public TicketMachine()
     {
-        price = cost;
         balance = 0;
         total = 0;
         createTickets();
@@ -150,6 +149,7 @@ public class TicketMachine
      */
     public void printTicket()
     {
+        price = selectedTicket.getPrice();
         if((balance >= price) && (selectedTicket !=null))
         
         {
