@@ -89,6 +89,13 @@ public class TicketMachine
       insertMoney(200);
   }
     
+  public void printAllTickets()
+  {
+      aylesburyTicket.print();
+      amershamTicket.print();
+      highWycombeTicket.print();
+  }
+  
     /**
      * Receive an amount of money from a customer.
      * Check that the amount is sensible.
@@ -203,18 +210,6 @@ else
         amountToRefund = balance;
         balance = 0;
         return amountToRefund;
-    }
-    
-   /**
-    * This allows to print every ticket
-    */
-    private void printAllTickets()
-   {
-       System.out.println();
-       aylesburyTicket.print();
-       amershamTicket.print();
-       highWycombeTicket.print();
-       
     }
    
 }
