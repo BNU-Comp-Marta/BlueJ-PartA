@@ -1,12 +1,15 @@
 
 /**
- * Write a description of class Module here.
+ * This class includes information 
+ * about Module details
  *
  * @author Marta Cyrn
  * @version 0.1 25.10.20
  */
 public class Module
 {
+    //Attributes
+    
     private String title;
     
     private String codeNo;
@@ -16,7 +19,7 @@ public class Module
     private boolean completed;
     
     /**
-     * Constructor for objects of class Module
+     * Constructor for Module's objects
      */
     public Module(String title, String codeNo)
     {
@@ -41,7 +44,8 @@ public class Module
     }
     
     /**
-     * 
+     * A method that shows 
+     * Module's marks
      */
     public int getMark()
     {
@@ -49,10 +53,10 @@ public class Module
     }
 
     /**
-     * 
+     * Prints out all the information about module
      */
     public void print()
     {
-        System.out.println(title + codeNo);
+        System.out.println(title + codeNo + mark);
     }
 }

@@ -1,7 +1,8 @@
 
 /**
- * This class contains information about the
- * course title and its course code
+ * This class includes information
+ * about the title of course and 
+ * its UCAS code
  *
  * @author Marta Cyrn
  * @version 0.2 8/10/2020
@@ -26,7 +27,7 @@ public class Course
     private Grades finalGrade;
     
     /**
-     * Constructor for objects of class Course
+     * Constructor for Course's objects
      */
     public Course(String title, String code)
     {
@@ -34,6 +35,9 @@ public class Course
         codeNumber = code;
     }
     
+    /**
+     * A method that allows printing
+     */
     public void print()
     {
         System.out.println("Course: " + title + ", Code " + codeNumber);
