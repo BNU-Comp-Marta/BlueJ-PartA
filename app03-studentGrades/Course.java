@@ -20,6 +20,11 @@ public class Course
     private Module module3;
     private Module module4;
     
+    private int module1Mark;
+    private int module2Mark;
+    private int module3Mark;
+    private int module4Mark;
+    
     private int noModules;
     
     private int finalMark;
@@ -73,18 +78,22 @@ public class Course
     if(moduleNo == 1)
     {
         module1.setMark(mark);
+        module1Mark = mark;
    }
    else if(moduleNo == 2) 
    { 
        module2.setMark(mark);
+       module2Mark = mark;
    }
    else if(moduleNo == 3)
    { 
        module3.setMark(mark);
+       module3Mark = mark;
    }
    else if(moduleNo == 4)
    {
        module4.setMark(mark);
+       module4Mark = mark;
    }  
    }
    
