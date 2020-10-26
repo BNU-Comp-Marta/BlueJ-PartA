@@ -1,11 +1,12 @@
 
 /**
- * Enumeration class Grades - write a description of the enum class here
+ * Enumeration class Grades provides information 
+ * about all available grades that each student can get
  *
- * @author (your name here)
- * @version (version number or date here)
+ * @author Marta Cyrn
+ * @version 0.1 25.10.20
  */
 public enum Grades
 {
-    MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY
+    NULL, F, D, C, B, A
 }
