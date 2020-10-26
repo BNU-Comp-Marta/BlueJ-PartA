@@ -52,6 +52,9 @@ public class Course
         module4 = new Module("Programming Concepts", "CO452");
     }
     
+    /**
+     * Method to add module to the Course
+     */
     public void addModule(Module module)
     
     {   noModules ++;
@@ -62,6 +65,9 @@ public class Course
          }
     }
     
+    /**
+     * Sets a mark to latter grade calculation
+     */
     public void setModuleMark(int mark, int moduleNo)
    {
     if(moduleNo == 1)
@@ -106,6 +112,7 @@ public class Course
      */
     public void print()
     {
-        System.out.println("Course: " + title + ", Code " + codeNumber);
+        System.out.println("Course: " + title + ", Code " + codeNumber + 
+       ", Mark: " + finalMark);
     }   
 }

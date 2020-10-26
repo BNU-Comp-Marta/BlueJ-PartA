@@ -29,6 +29,10 @@ public class Module
         completed = false;
     }
     
+    /**
+     * A method that sets a mark which
+     * allows a student to pass a module
+     */
     public void setMark(int mark)
     {
         if((mark >= 0) && (mark <= 100))
@@ -38,6 +42,9 @@ public class Module
         }
     }
     
+    /**
+     * A method that states if a sentence is true or false
+     */
     public boolean isCompleted()
     {
         return completed;
@@ -57,6 +64,7 @@ public class Module
      */
     public void print()
     {
-        System.out.println(title + codeNo + mark);
+        System.out.println("Course: " + title + ", Code " + codeNo + 
+        ", Mark: " + mark);
     }
 }
