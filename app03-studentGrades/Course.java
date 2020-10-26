@@ -65,7 +65,7 @@ public class Course
          }
     }
     
-    /**
+     /**
      * Sets a mark to latter grade calculation
      */
     public void setModuleMark(int mark, int moduleNo)
@@ -73,10 +73,19 @@ public class Course
     if(moduleNo == 1)
     {
         module1.setMark(mark);
-        module2.setMark(mark);
-        module3.setMark(mark);
-        module4.setMark(mark);
-    }
+   }
+   else if(moduleNo == 2) 
+   { 
+       module2.setMark(mark);
+   }
+   else if(moduleNo == 3)
+   { 
+       module3.setMark(mark);
+   }
+   else if(moduleNo == 4)
+   {
+       module4.setMark(mark);
+   }  
    }
    
    /**
@@ -88,22 +97,27 @@ public class Course
        if(finalMark < 40)
        {
            finalGrade = Grades.F;
+           System.out.println("Your grade is " + finalGrade);
         }
         else if((finalMark >= 40) && (finalMark < 50))
         {
             finalGrade = Grades.D;
+            System.out.println("Your grade is " + finalGrade);
         }
         else if((finalMark >=50) && (finalMark < 60))
         {
             finalGrade = Grades.C;
+            System.out.println("Your grade is " + finalGrade);
         }
         else if((finalMark >=60) && (finalMark < 70))
         { 
             finalGrade = Grades.B;
+            System.out.println("Your grade is " + finalGrade);
         }
         else if((finalMark >=70) && (finalMark < 100))
         {
             finalGrade = Grades.A;
+            System.out.println("Your grade is " + finalGrade);
         }
    }
     
@@ -114,5 +128,6 @@ public class Course
     {
         System.out.println("Course: " + title + ", Code " + codeNumber + 
        ", Mark: " + finalMark);
+       System.out.println("Your grade is " + finalGrade);
     }   
 }
