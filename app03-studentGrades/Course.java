@@ -136,7 +136,7 @@ public class Course
     }
     
     /**
-    * 
+    * A method to compute the final mark
     */
     public void calculateFinalMark()
     {

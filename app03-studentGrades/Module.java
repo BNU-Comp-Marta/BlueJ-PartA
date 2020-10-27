@@ -60,7 +60,10 @@ public class Module
     {
         return mark;
     }
-
+    
+    /**
+     * Gives a title to the module
+     */
     public String getTitle()
     {
         return title;

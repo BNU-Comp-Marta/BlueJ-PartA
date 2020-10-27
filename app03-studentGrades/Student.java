@@ -10,26 +10,25 @@ import java.util.*;
 public class Student
 {
     //Attributes
-    
+
     private String name;
-    
+
     private String id;
-    
+
     private int credits;
-    
+
     private Course course;
-    
-   
-   /**
-    * Gives each student and ID and names
-    */
+
+    /**
+     * Gives each student and ID and names
+     */
     public Student(String fullName, String studentID)
     {
         name = fullName;
         id = studentID;
         credits = 0;
     }
-    
+
     /**
      * Gives student a course
      */
@@ -37,16 +36,16 @@ public class Student
     {
         this.course = course;
     }
-    
-   /**
-   * Enrols students
-   */
+
+    /**
+     * Enrols students
+     */
     public void enrolOnCourse(Course course)
     {
         this.course = course; 
     }
-    
-   /**
+
+    /**
      * Return the full name of this student
      */
     public String getName()
@@ -54,9 +53,9 @@ public class Student
         return name;
     }
 
-   /**
-    * Gives student a new name
-    */
+    /**
+     * Gives student a new name
+     */
     public void changeName(String replacementName)
     {
         name = replacementName;
@@ -78,7 +77,6 @@ public class Student
         credits += additionalPoints;
     }
 
-    
     /**
      * Return the number of credit points this student has accumulated.
      */
@@ -96,7 +94,7 @@ public class Student
     {
         return name.substring(0,4) + id.substring(0,3);
     }
-    
+
     /**
      * Prints the student's name and ID number
      */
