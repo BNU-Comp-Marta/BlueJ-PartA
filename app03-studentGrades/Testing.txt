@@ -1,0 +1,162 @@
+Student student1 = new Student("Peter Smith", "0331");
+Course course1 = new Course("Computing", "C445");
+student1.addCourse(course1);
+course1.print();
+module Details:
+Title = Programming Concepts
+ID code = CO452
+Current Mark = 0%
+...................................
+module Details:
+Title = 3D Modelling
+ID code = CO366
+Current Mark = 0%
+...................................
+module Details:
+Title = Animation
+ID code = G771
+Current Mark = 0%
+...................................
+module Details:
+Title = Computer Architecture
+ID code = CO284
+Current Mark = 0%
+...................................
+................................
+Course: Computing, Course ID: C445
+.................................
+Your grade is: null
+student1.print();
+Peter Smith, student ID: 0331, credits: 0
+module Details:
+Title = Programming Concepts
+ID code = CO452
+Current Mark = 0%
+...................................
+module Details:
+Title = 3D Modelling
+ID code = CO366
+Current Mark = 0%
+...................................
+module Details:
+Title = Animation
+ID code = G771
+Current Mark = 0%
+...................................
+module Details:
+Title = Computer Architecture
+ID code = CO284
+Current Mark = 0%
+...................................
+................................
+Course: Computing, Course ID: C445
+.................................
+Your grade is: null
+course1.print();
+module Details:
+Title = Programming Concepts
+ID code = CO452
+Current Mark = 0%
+...................................
+module Details:
+Title = 3D Modelling
+ID code = CO366
+Current Mark = 0%
+...................................
+module Details:
+Title = Animation
+ID code = G771
+Current Mark = 0%
+...................................
+module Details:
+Title = Computer Architecture
+ID code = CO284
+Current Mark = 0%
+...................................
+................................
+Course: Computing, Course ID: C445
+.................................
+Your grade is: null
+course1.setModuleMark(60, 1);
+course1.setModuleMark(70, 2);
+course1.setModuleMark(44, 3);
+course1.setModuleMark(55, 4);
+course1.print();
+module Details:
+Title = Programming Concepts
+ID code = CO452
+Current Mark = 60%
+...................................
+module Details:
+Title = 3D Modelling
+ID code = CO366
+Current Mark = 70%
+...................................
+module Details:
+Title = Animation
+ID code = G771
+Current Mark = 44%
+...................................
+module Details:
+Title = Computer Architecture
+ID code = CO284
+Current Mark = 55%
+...................................
+................................
+Course: Computing, Course ID: C445
+.................................
+Your grade is: null
+student1.print();
+Peter Smith, student ID: 0331, credits: 0
+module Details:
+Title = Programming Concepts
+ID code = CO452
+Current Mark = 60%
+...................................
+module Details:
+Title = 3D Modelling
+ID code = CO366
+Current Mark = 70%
+...................................
+module Details:
+Title = Animation
+ID code = G771
+Current Mark = 44%
+...................................
+module Details:
+Title = Computer Architecture
+ID code = CO284
+Current Mark = 55%
+...................................
+................................
+Course: Computing, Course ID: C445
+.................................
+Your grade is: null
+course1.calculateFinalMark();
+course1.calculateFinalGrade();
+Your grade is C
+course1.print();
+module Details:
+Title = Programming Concepts
+ID code = CO452
+Current Mark = 60%
+...................................
+module Details:
+Title = 3D Modelling
+ID code = CO366
+Current Mark = 70%
+...................................
+module Details:
+Title = Animation
+ID code = G771
+Current Mark = 44%
+...................................
+module Details:
+Title = Computer Architecture
+ID code = CO284
+Current Mark = 55%
+...................................
+................................
+Course: Computing, Course ID: C445
+.................................
+Your grade is: C

@@ -18,10 +18,6 @@ public class Module
     
     private boolean completed;
     
-    private String moduleName;
-    
-    private String moduleCode;
-    
     private int moduleMark;
     
     /**
@@ -33,7 +29,6 @@ public class Module
         this.title = title;
         this.codeNo = codeNo;
         completed = false;
-        moduleCode = codeNo;
     }
     
     /**
@@ -63,12 +58,12 @@ public class Module
      */
     public int getMark()
     {
-        return moduleMark;
+        return mark;
     }
 
-    public String getName()
+    public String getTitle()
     {
-        return moduleName;
+        return title;
     }
         
     /**
@@ -77,9 +72,9 @@ public class Module
     public void print()
     {
         System.out.println("module Details:");
-        System.out.println("Name = " + moduleName);
-        System.out.println("ID code = " + moduleCode);
-        System.out.println("Current Mark = " + moduleMark + "%");
+        System.out.println("Title = " + title);
+        System.out.println("ID code = " + codeNo);
+        System.out.println("Current Mark = " + mark + "%");
         System.out.println("...................................");
     }
 }

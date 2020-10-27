@@ -1,4 +1,0 @@
-Module module1 = new Module("Programming Concepts", "G231");
-module1.setMark(60);
-module1.print();
-Course: Programming Concepts, Code G231, Mark: 60
