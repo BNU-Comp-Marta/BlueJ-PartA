@@ -18,6 +18,12 @@ public class Module
     
     private boolean completed;
     
+    private String moduleName;
+    
+    private String moduleCode;
+    
+    private int moduleMark;
+    
     /**
      * Constructor for Module's objects
      */
@@ -27,6 +33,7 @@ public class Module
         this.title = title;
         this.codeNo = codeNo;
         completed = false;
+        moduleCode = codeNo;
     }
     
     /**
@@ -56,15 +63,23 @@ public class Module
      */
     public int getMark()
     {
-        return mark;
+        return moduleMark;
     }
 
+    public String getName()
+    {
+        return moduleName;
+    }
+    
     /**
      * Prints out all the information about module
      */
     public void print()
     {
-        System.out.println("Course: " + title + ", Code " + codeNo + 
-        ", Mark: " + mark);
+        System.out.println("module Details:");
+        System.out.println("Name = " + moduleName);
+        System.out.println("ID code = " + moduleCode);
+        System.out.println("Current Mark = " + moduleMark + "%");
+        System.out.println("...................................");
     }
 }

@@ -18,6 +18,7 @@ public class Student
     private int credits;
     
     private Course course;
+    
    
    /**
     * Gives each student and ID and names
@@ -27,6 +28,11 @@ public class Student
         name = fullName;
         id = studentID;
         credits = 0;
+    }
+    
+    public void addCourse(Course course)
+    {
+        this.course = course;
     }
     
    /**
@@ -94,5 +100,6 @@ public class Student
     public void print()
     {
         System.out.println(name + ", student ID: " + id + ", credits: " + credits);
+        course.print();
     }
 }
