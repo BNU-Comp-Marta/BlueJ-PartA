@@ -2,7 +2,7 @@ import java.util.*;
 
 /**
  * This class includes information 
- * about student details
+ * about student, their marks and grades
  * 
  * @author Marta Cyrn
  * @version 25.10.2020
@@ -30,6 +30,9 @@ public class Student
         credits = 0;
     }
     
+    /**
+     * Gives student a course
+     */
     public void addCourse(Course course)
     {
         this.course = course;

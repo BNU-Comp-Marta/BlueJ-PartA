@@ -52,29 +52,68 @@ public class Course
     public void createModules()
     {
         module1 = new Module("Programming Concepts", "CO452");
-        module2 = new Module("Programming Concepts", "CO452");
-        module3 = new Module("Programming Concepts", "CO452");
-        module4 = new Module("Programming Concepts", "CO452");
+        module2 = new Module("3D Modelling", "CO366");
+        module3 = new Module("Animation", "G771");
+        module4 = new Module("Computer Architecture", "CO284");
     }
     
     /**
-     * Method to add module to the Course
+     * Method to add 4 modules to the Course
      */
-    public void addModule(Module module)
+    public void addModule(String moduleName, String moduleCode)
     
     {   noModules ++;
         
          if(noModules == 1)
          {
-             module1 = module;
+             module1 = new Module(moduleName, moduleCode);
          }
+         else if (noModules == 2)
+         {
+            module2 = new Module(moduleName, moduleCode);
+         }
+         else if (noModules == 3)
+         {
+             module3 = new Module(moduleName, moduleCode);
+         }
+         else if (noModules == 4)
+         {
+             module4 = new Module(moduleName, moduleCode);
+         }
+    }
+    
+    /** Method to print module name
+     * 
+     */
+    public void printModulesDetails(String moduleName)
+    {
+        if (moduleName == module1.getName())
+        {
+            System.out.println ("...................");
+            module1.print();
+        }
+        else if (moduleName == module2.getName())
+        {
+            System.out.println ("...................");
+            module2.print();
+        }
+       else if (moduleName == module3.getName())
+       {
+           System.out.println ("...................");
+           module3.print();
+       }
+       else if (moduleName == module4.getName())
+       {
+           System.out.println ("...................");
+           module4.print();
+       }
     }
     
      /**
      * Sets a mark to latter grade calculation
      */
     public void setModuleMark(int mark, int moduleNo)
-   {
+    {
     if(moduleNo == 1)
     {
         module1.setMark(mark);
@@ -94,8 +133,8 @@ public class Course
    {
        module4.setMark(mark);
        module4Mark = mark;
-   }  
-   }
+   } 
+  }
    
    /**
     * Calculates predicted grades depending 
@@ -131,12 +170,25 @@ public class Course
    }
     
     /**
-     * A method that allows printing
+     * A method that prints the course details
      */
     public void print()
     {
-        System.out.println("Course: " + title + ", Code " + codeNumber + 
-       ", Mark: " + finalMark);
-       System.out.println("Your grade is " + finalGrade);
-    }   
+        if (noModules <= 3)
+        {
+        System.out.println("You need 4 modules");
+        System.out.println("Current number of modules: " + noModules);
+        } 
+        else
+        {
+            module1.print();
+            module2.print();
+            module3.print();
+            module4.print();
+            System.out.println ("................................");
+            System.out.println ("Course: " + title + ", Course ID: " + codeNumber);
+            System.out.println (".................................");
+            System.out.println ("Your grade is: " + finalGrade);
+        }
+    }
 }

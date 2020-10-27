@@ -70,7 +70,7 @@ public class Module
     {
         return moduleName;
     }
-    
+        
     /**
      * Prints out all the information about module
      */
