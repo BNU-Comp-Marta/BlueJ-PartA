@@ -26,8 +26,6 @@ public class Course
 
     private Grades finalGrade;
 
-    private Grades grade;
-
     /**
      * Constructor for Course's objects
      */
@@ -37,7 +35,7 @@ public class Course
         this.codeNumber = code;
         noModules = 0;
 
-        grade = Grades.NULL;
+        finalGrade = Grades.NULL;
         createModules();
     }
 
