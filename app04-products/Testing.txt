@@ -1,0 +1,29 @@
+Product product1 = new Product(443, "Samsung");
+product1.deliver(3);
+product1.sell(4);
+Only 3 Samsung in stock, but there were 4 ordered 
+Product product2 = new Product(321, "Laptop");
+product2.getQuantity()
+    returned int 0
+product2.sell(5);
+Only 0 Laptop in stock, but there were 5 ordered 
+product2.deliver(3);
+product2.sell(3);
+Selling 3 of stock item: Laptop
+Product product3 = new Product(112, "PC");
+product3.deliver(10);
+product3.getQuantity()
+    returned int 10
+product3.sell(11);
+Only 10 PC in stock, but there were 11 ordered 
+StockManager stockMan1 = new StockManager();
+stockMan1.findProduct(321)
+    returned Object null
+stockMan1.numberProductsInStock()
+    returned int 0
+stockMan1.printAllProducts();
+
+====================
+Cyrn's Stock List
+====================
+
