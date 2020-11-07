@@ -10,9 +10,9 @@ public class StockDemo
 {
     // Attributes
     private StockManager manager;
-    
+
     private Random generator = new Random();
-    
+
     private int amount = 0;
 
     /**
@@ -32,76 +32,31 @@ public class StockDemo
         manager.addProduct(new Product(109,  "Wacom Intuos Pro"));
         manager.addProduct(new Product(110,  "Lg G7 ThinQ"));
     }
-    
+
     /**
-     * Provide a very simple demonstration of how a StockManager
-     * might be used. Details of one product are shown, the
-     * product is restocked, and then the details are shown again.
+     * A method that allows to sell 
+     * all the products
      */
-    public void demo()
+    private void demoSellProducts()
     {
-        // Show details of all of the products.
-        manager.printProductDetails();
-        // Take delivery of 5 items of one of the products.
-        manager.delivery(132, 5);
-        manager.printProductDetails();
-    }
-    
-    /**
-     * Show details of the given product. If found,
-     * its name and stock quantity will be shown.
-     * @param id The ID of the product to look for.
-     */
-    public void showDetails(int id)
-    {
-        Product product = getProduct(id);
-        
-        if(product != null) 
-        {
-            System.out.println(product.toString());
+        System.out.println("\nSelling all the products\n");
+
+        for(int id = 101; id <= 112; id++)
+        { 
+            amount = generator.nextInt(4);
         }
-    }
-    
-    /**
-     * Sell one of the given item.
-     * Show the before and after status of the product.
-     * @param id The ID of the product being sold.
-     */
-    public void sellProduct(int id)
-    {
-        Product product = getProduct(id);
-        
-        if(product != null) 
-        {
-            showDetails(id);
-            product.sellOne();
-            showDetails(id);
-        }
-    }
-    
-    /**
-     * Get the product with the given id from the manager.
-     * An error message is printed if there is no match.
-     * @param id The ID of the product.
-     * @return The Product, or null if no matching one is found.
-     */
-    public Product getProduct(int id)
-    {
-        Product product = manager.findProduct(id);
-        
-        if(product == null) 
-        {
-            System.out.println("Product with ID: " + id +
-                               " is not recognised.");
-        }
-        return product;
     }
 
     /**
-     * @return The stock manager.
+     * A method which makes it
+     * possible to deliver the products
      */
-    public StockManager getManager()
+    private void demoDeliverProducts()
     {
-        return manager;
+        System.out.println("\nSelling all the products\n");
+        for(int id= 101; id <= 122; id++)
+        {
+            amount = generator.nextInt(8);
+        }
     }
 }

@@ -1,19 +1,21 @@
 import java.util.ArrayList;
 
 /**
- * Manage the stock in a business.
- * The stock is described by zero or more Products.
+ * The class that
+ * contains data of all 
+ * the products in stock
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Marta Cyrn
+ * @version 0.1 07.11.20
  */
 public class StockManager
 {
-    // A list of the products.
+    // Attributes
+
     private ArrayList<Product> stock;
 
     /**
-     * Initialise the stock manager.
+     * Initialises the stock manager
      */
     public StockManager()
     {
@@ -21,8 +23,7 @@ public class StockManager
     }
 
     /**
-     * Add a product to the list.
-     * @param item The item to be added.
+     * Adds products to the list
      */
     public void addProduct(Product item)
     {
@@ -30,41 +31,70 @@ public class StockManager
     }
     
     /**
-     * Receive a delivery of a particular product.
-     * Increase the quantity of the product by the given amount.
-     * @param id The ID of the product.
-     * @param amount The amount to increase the quantity by.
-     */
-    public void delivery(int id, int amount)
-    {
-    }
-    
-    /**
-     * Try to find a product in the stock with the given id.
-     * @return The identified product, or null if there is none
-     *         with a matching ID.
+     * Finds a product from 
+     * stock by inserting its id
      */
     public Product findProduct(int id)
     {
+        for(Product product : stock)
+        {
+            if(product.getID() == id)
+            {
+                return product;
+            }
+        }
         return null;
     }
     
     /**
-     * Locate a product with the given ID, and return how
-     * many of this item are in stock. If the ID does not
-     * match any product, return zero.
-     * @param id The ID of the product.
-     * @return The quantity of the given product in stock.
+     * Displays the number of
+     * the amount of 
+     * all products available
      */
-    public int numberInStock(int id)
-    {
-        return 0;
+    public int numberProductsInStock()
+    { 
+        return stock.size();
     }
-
+    
     /**
-     * Print details of all the products.
+     * A method that will
+     * print the details of a particulat 
+     * product with an inserted id
      */
-    public void printProductDetails()
+    public void printDetails(int id)
     {
+        Product product = findProduct(id);
+        
+        if(product != null) 
+        {
+            System.out.println(product.toString());
+        }
     }
+    
+    /**
+     * Print details of all the products
+     */
+    public void printAllProducts()
+    {
+        printHeading();
+        
+        for(Product product : stock)
+        {
+            //product.print();
+            System.out.println(product);
+        }
+    }
+    
+    /**
+     * A method to print out the heading
+     */
+    public void printHeading()
+    {
+        System.out.println();
+        System.out.println("====================");
+        System.out.println("Cyrn's Stock List");
+        System.out.println("====================");
+        System.out.println();
+    }
+    
 }
