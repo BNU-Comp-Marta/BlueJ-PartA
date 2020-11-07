@@ -1,26 +1,36 @@
+import java.util.Random;
 /**
- * Demonstrate the StockManager and Product classes.
- * The demonstration becomes properly functional as
- * the StockManager class is completed.
+ * A class that demonstrates 
+ * all the products
  * 
- * @author David J. Barnes and Michael Kölling.
- * @version 2016.02.29
+ * @author Marta Cyrn
+ * @version 0.1 07.11.20
  */
 public class StockDemo
 {
-    // The stock manager.
+    // Attributes
     private StockManager manager;
+    
+    private Random generator = new Random();
+    
+    private int amount = 0;
 
     /**
-     * Create a StockManager and populate it with a few
-     * sample products.
+     * Creates stockmanager that is filled with its products
      */
-    public StockDemo()
+    public StockDemo(StockManager manager)
     {
-        manager = new StockManager();
-        manager.addProduct(new Product(132, "Clock Radio"));
-        manager.addProduct(new Product(37,  "Mobile Phone"));
-        manager.addProduct(new Product(23,  "Microwave Oven"));
+        this.manager = manager;
+        manager.addProduct(new Product(101, "Xp Pen Artist 12 Pro"));
+        manager.addProduct(new Product(102,  "Samsung Galaxy S7 Edge"));
+        manager.addProduct(new Product(103,  "Razer Blade 15"));
+        manager.addProduct(new Product(104,  "Asus Rog Strix G15"));
+        manager.addProduct(new Product(105,  "Xiaomi Redmi 9A"));
+        manager.addProduct(new Product(106,  "Wacom Cintiq Pro 16"));
+        manager.addProduct(new Product(107,  "Wacom Cintiq Pro 24"));
+        manager.addProduct(new Product(108,  "Wacom Cintiq Pro 32"));
+        manager.addProduct(new Product(109,  "Wacom Intuos Pro"));
+        manager.addProduct(new Product(110,  "Lg G7 ThinQ"));
     }
     
     /**
