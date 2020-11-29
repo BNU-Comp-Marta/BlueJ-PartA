@@ -38,7 +38,7 @@ public class StockApp
         {
             printHeading();
             printMenuChoices();
-
+            
             String choice = input.getString();
             choice = choice.toUpperCase();
 
@@ -84,9 +84,6 @@ public class StockApp
         
         System.out.println("Enter a product ID");
         String value = input.getString();
-        
-        int id = Integer.parseInt(value);
-        Product product = new Product(id, name);
     }
 
     /**
