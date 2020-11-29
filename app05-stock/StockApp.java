@@ -12,6 +12,10 @@ public class StockApp
     // Attributes
 
     private InputReader input;
+    
+    private StockManager manager;
+    
+    private StockDemo demo;
 
     /**
      * Constructor for objects of class StockApp
@@ -19,6 +23,8 @@ public class StockApp
     public StockApp()
     {
         input = new InputReader();
+        manager = new StockManager();
+        demo = new StockDemo(manager);
     }
 
     /**
@@ -62,7 +68,7 @@ public class StockApp
         }
         else if(choice.equals("PRINTALL"))
         {
-            printAllProducts();
+            printProducts();
         }
     }
 
@@ -76,8 +82,9 @@ public class StockApp
     /**
      * A method that allows printing products
      */
-    private void printAllProducts()
+    private void printProducts()
     {
+        manager.printAllProducts();
     }
     
     /**

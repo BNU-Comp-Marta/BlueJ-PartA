@@ -34,6 +34,17 @@ public class StockDemo
     }
 
     /**
+     * 
+     */
+    public void runDemo()
+    {
+        manager.printAllProducts();
+        int noProducts = manager.numberProductsInStock();
+        System.out.println("Number of products in stock: " + noProducts +
+            "\n");
+    }
+    
+    /**
      * A method that allows to sell 
      * all the products
      */
@@ -47,6 +58,13 @@ public class StockDemo
         }
     }
 
+    private void printSelling()
+    {
+        System.out.println("------------------");
+        System.out.println("SellingProducts");
+        System.out.println("-----------------");
+    }
+    
     /**
      * A method which makes it
      * possible to deliver the products
@@ -58,5 +76,15 @@ public class StockDemo
         {
             amount = generator.nextInt(8);
         }
+    }
+    
+    /**
+     * 
+     */
+    private void printDelivery()
+    {
+        System.out.println("----------------");
+        System.out.println("Delivering Products");
+        System.out.println("----------------");
     }
 }

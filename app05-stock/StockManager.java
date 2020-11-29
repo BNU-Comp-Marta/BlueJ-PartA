@@ -24,10 +24,51 @@ public class StockManager
 
     /**
      * Adds products to the list
+     * @param item The item to be added
      */
     public void addProduct(Product item)
     {
         stock.add(item);
+    }
+    
+    /**
+     * A method that allows to rename the product
+     */
+    public void renameProduct(int id, String name)
+    {
+        Product product = findProduct(id);
+        if (product != null)
+        {
+            product.setName(name);
+        }
+        else
+        {
+            printInvalidID();
+        }
+    }
+    
+    /**
+     * A method that allows to delete product
+     */
+    public void removeProduct(int id)
+    {
+        Product product = findProduct(id);
+        if (product !=null)
+        {
+            product.removeProduct();
+        }
+        else
+        {
+            printInvalidID();
+        }
+    }
+    
+    /**
+     * Prints out if the id is invalid
+     */
+    private void printInvalidID()
+    {
+        System.out.println("The id you have entered is invalid");
     }
     
     /**
@@ -72,7 +113,7 @@ public class StockManager
     }
     
     /**
-     * Print details of all the products
+     * Prints all the products
      */
     public void printAllProducts()
     {
@@ -80,9 +121,9 @@ public class StockManager
         
         for(Product product : stock)
         {
-            //product.print();
             System.out.println(product);
         }
+        System.out.println();
     }
     
     /**
