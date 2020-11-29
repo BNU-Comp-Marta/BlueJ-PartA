@@ -1,0 +1,83 @@
+Program.main();
+******************************
+ Stock Management Application 
+    App05: Marta Cyrn
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Search:     Finds a product
+    Restock:    Restocks products
+    PrintAll:   Print all products
+    Sell:       Sells the product
+    Quit:       Quit the program
+
+> printall
+
+====================
+Cyrn's Stock List
+====================
+
+101: Xp Pen Artist 12 Pro stock level: 0
+102: Samsung Galaxy S7 Edge stock level: 0
+103: Razer Blade 15 stock level: 0
+104: Asus Rog Strix G15 stock level: 0
+105: Xiaomi Redmi 9A stock level: 0
+106: Wacom Cintiq Pro 16 stock level: 0
+107: Wacom Cintiq Pro 24 stock level: 0
+108: Wacom Cintiq Pro 32 stock level: 0
+109: Wacom Intuos Pro stock level: 0
+110: Lg G7 ThinQ stock level: 0
+
+******************************
+ Stock Management Application 
+    App05: Marta Cyrn
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Search:     Finds a product
+    Restock:    Restocks products
+    PrintAll:   Print all products
+    Sell:       Sells the product
+    Quit:       Quit the program
+
+> add
+
+Adding a new product
+Enter the product name
+> Razer Blade 15
+Enter a product ID
+> 103
+
+New Product added 103: Razer Blade 15 stock level: 0
+
+******************************
+ Stock Management Application 
+    App05: Marta Cyrn
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Search:     Finds a product
+    Restock:    Restocks products
+    PrintAll:   Print all products
+    Sell:       Sells the product
+    Quit:       Quit the program
+
+> remove
+A product has been removed
+******************************
+ Stock Management Application 
+    App05: Marta Cyrn
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Search:     Finds a product
+    Restock:    Restocks products
+    PrintAll:   Print all products
+    Sell:       Sells the product
+    Quit:       Quit the program
+
+> quit
