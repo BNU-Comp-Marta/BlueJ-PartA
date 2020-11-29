@@ -10,9 +10,9 @@
 public class StockApp
 {
     // Attributes
-    
+
     private InputReader input;
-    
+
     /**
      * Constructor for objects of class StockApp
      */
@@ -27,17 +27,32 @@ public class StockApp
     public void run()
     {
         boolean finished = false;
-        
+
         while(!finished)
         {
             printHeading();
             printMenuChoices();
-           
+
             String choice = input.getInput();
-            finished = true;
+            choice = choice.toUpperCase();
+            
+            if(choice.equals("QUIT"))
+            {
+                finished = true;
+            }
+            else
+            {
+                executeMenuChoice(choice);
+            }
         }
     }
     
+    /**
+     * 
+     */private void executeMenuChoice(String choice)
+    {
+    }
+
     /**
      * Prints out a menu of available choices
      */
@@ -50,7 +65,7 @@ public class StockApp
         System.out.println("    Quit:       Quit the program");
         System.out.println();        
     }
-    
+
     /**
      * Prints the program's 
      * title and its author's name
