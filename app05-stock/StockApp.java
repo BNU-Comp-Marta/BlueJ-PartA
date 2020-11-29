@@ -1,15 +1,16 @@
 
 /**
- * This app provides a user interface to the
- * stock manager so that users can add, edit,
- * print and remove stock products
+ * This class provides 
+ * a user interface of stock manager 
+ * Users can modify products
  *
- * @author Student Name
- * @version 0.1
+ * @author Marta Cyrn
+ * @version 0.1 29.11.20
  */
 public class StockApp
 {
-    // Use to get user input
+    // Attributes
+    
     private InputReader input;
     
     /**
@@ -67,7 +68,7 @@ public class StockApp
     {
         System.out.println("******************************");
         System.out.println(" Stock Management Application ");
-        System.out.println("    App05: by Student Name");
+        System.out.println("    App05: Marta Cyrn");
         System.out.println("******************************");
     }
 }

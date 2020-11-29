@@ -2,18 +2,19 @@ import java.util.HashSet;
 import java.util.Scanner;
 
 /**
- * InputReader reads typed text input from the standard text terminal. 
- * The text typed by a user is returned.
+ * Class InputReader reads typed text input 
+ * provided to terminal
  * 
- * @author     Michael Kölling and David J. Barnes
- * @version    0.1 (2016.02.29)
+ * @author     Marta Cyrn
+ * @version    0.1 29.11.20
  */
+
 public class InputReader
 {
     private Scanner reader;
 
     /**
-     * Create a new InputReader that reads text from the text terminal.
+     * Creates InputReader that reads terminal's text 
      */
     public InputReader()
     {
