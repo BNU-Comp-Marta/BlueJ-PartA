@@ -48,6 +48,22 @@ public class StockManager
     }
 
     /**
+     * A method that allows to search for a product
+     */
+    public void printName(String findName)
+    {
+        printHeading();
+        System.out.println("Products Names with: '" + findName + "':");
+        for (Product product : stock)
+        {
+            if(product.getName().contains(findName))
+            {
+                System.out.println(product);
+            }
+        }
+    }
+    
+    /**
      * A method that allows to delete product
      */
     public void removeProduct(int id)
@@ -138,4 +154,30 @@ public class StockManager
         System.out.println();
     }
 
+    /**
+     * Sells all the products.
+     */
+    public void sellProduct(int id, int quantity)
+    {
+        Product product = findProduct(id);
+        
+        if(product != null)
+        {
+            product.sell(quantity);
+        }
+    }
+    
+    /**
+     * A method that restocks a product
+     */
+      public void restock()
+    {
+        for(Product product : stock)
+        {
+            if(product.getQuantity() < 5)
+            {
+                product.deliver(10);
+            }
+        }
+    }
 }

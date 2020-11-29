@@ -12,9 +12,9 @@ public class StockApp
     // Attributes
 
     private InputReader input;
-    
+
     private StockManager manager;
-    
+
     private StockDemo demo;
 
     /**
@@ -38,7 +38,7 @@ public class StockApp
         {
             printHeading();
             printMenuChoices();
-            
+
             String choice = input.getString();
             choice = choice.toUpperCase();
 
@@ -53,7 +53,7 @@ public class StockApp
         }
     }
 
-    /**
+     /**
      * Adds choices to the menu
      * 
      */private void executeMenuChoice(String choice)
@@ -70,6 +70,44 @@ public class StockApp
         {
             printProducts();
         }
+        else if(choice.equals("SEARCH"))
+        {
+            findProduct();
+        }
+        else if(choice.equals("RESTOCK"))
+        {
+            restock();
+        }
+        else if(choice.equals("SELL"))
+        {
+            sellProduct();
+        }
+    }
+
+     /**
+     * A method that allows to sell products.
+     */
+    private void sellProduct()
+    {
+    }
+    
+      /**
+     * A method that allows finding a product
+     */
+    private void findProduct()
+    {
+        System.out.println("\nSearching Product");
+        System.out.println("Enter the product name");
+        String choice = input.getString();
+    }
+
+   
+    /**
+     * A method that removes a product
+     */
+    public void removeProduct()
+    {
+        System.out.println("A product has been removed");
     }
 
     /**
@@ -78,18 +116,18 @@ public class StockApp
     private void addProduct()
     {
         System.out.println("\nAdding a new product");
-        
+
         System.out.println("Enter the product name");
         String name = input.getString();
-        
+
         System.out.println("Enter a product ID");
         String value = input.getString();
-        
+
         int id = Integer.parseInt(value);
         Product product = new Product(id, name);
-        
+
         manager.addProduct(product);
-        
+
         System.out.println("\nNew Product added " + product + "\n");
     }
 
@@ -100,14 +138,15 @@ public class StockApp
     {
         manager.printAllProducts();
     }
-    
+
     /**
-     * Method that allows removing a product
+     * Restocks a product
      */
-    private void removeProduct()
+     private void restock()
     {
+        manager.restock();
     }
-    
+
      /**
      * Prints out a menu of available choices
      */
@@ -116,7 +155,10 @@ public class StockApp
         System.out.println();
         System.out.println("    Add:        Add a new product");
         System.out.println("    Remove:     Remove an old product");
+        System.out.println("    Search:     Finds a product");
+        System.out.println("    Restock:    Restocks products");
         System.out.println("    PrintAll:   Print all products");
+        System.out.println("    Sell:       Sells the product");
         System.out.println("    Quit:       Quit the program");
         System.out.println();        
     }
@@ -132,4 +174,5 @@ public class StockApp
         System.out.println("    App05: Marta Cyrn");
         System.out.println("******************************");
     }
+
 }
