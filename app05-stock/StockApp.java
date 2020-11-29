@@ -35,7 +35,7 @@ public class StockApp
 
             String choice = input.getInput();
             choice = choice.toUpperCase();
-            
+
             if(choice.equals("QUIT"))
             {
                 finished = true;
@@ -46,14 +46,48 @@ public class StockApp
             }
         }
     }
-    
+
     /**
+     * Adds choices to the menu
      * 
      */private void executeMenuChoice(String choice)
+    {
+        if(choice.equals("ADD"))
+        {
+            addProduct();
+        }
+        else if(choice.equals("REMOVE"))
+        {
+            removeProduct();
+        }
+        else if(choice.equals("PRINTALL"))
+        {
+            printAllProducts();
+        }
+    }
+
+    /**
+     * A method that adds a product
+     */
+    private void addProduct()
     {
     }
 
     /**
+     * A method that allows printing products
+     */
+    private void printAllProducts()
+    {
+    }
+    
+    /**
+     * Method that allows removing a product
+     */
+    private void removeProduct()
+    {
+    }
+    
+     /**
      * Prints out a menu of available choices
      */
     private void printMenuChoices()
