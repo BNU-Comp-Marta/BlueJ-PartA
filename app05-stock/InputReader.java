@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 /**
  * Class InputReader reads typed text input 
- * provided to terminal
+ * from text terminal
  * 
  * @author     Marta Cyrn
  * @version    0.1 29.11.20

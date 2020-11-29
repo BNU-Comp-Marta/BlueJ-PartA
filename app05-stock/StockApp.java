@@ -22,18 +22,9 @@ public class StockApp
     }
 
     /**
-     * 
+     * Runs and displays an input menu
      */
     public void run()
-    {
-        printHeading();
-        getMenuChoice();
-    }
-    
-    /**
-     * 
-     */
-    public void getMenuChoice()
     {
         boolean finished = false;
         
@@ -47,9 +38,8 @@ public class StockApp
         }
     }
     
-   
     /**
-     * Print out a menu of operation choices
+     * Prints out a menu of available choices
      */
     private void printMenuChoices()
     {
@@ -62,7 +52,8 @@ public class StockApp
     }
     
     /**
-     * Print the title of the program and the authors name
+     * Prints the program's 
+     * title and its author's name
      */
     private void printHeading()
     {
