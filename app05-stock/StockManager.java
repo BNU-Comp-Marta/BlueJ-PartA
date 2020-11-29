@@ -30,7 +30,7 @@ public class StockManager
     {
         stock.add(item);
     }
-    
+
     /**
      * A method that allows to rename the product
      */
@@ -46,7 +46,7 @@ public class StockManager
             printInvalidID();
         }
     }
-    
+
     /**
      * A method that allows to delete product
      */
@@ -62,7 +62,7 @@ public class StockManager
             printInvalidID();
         }
     }
-    
+
     /**
      * Prints out if the id is invalid
      */
@@ -70,7 +70,7 @@ public class StockManager
     {
         System.out.println("The id you have entered is invalid");
     }
-    
+
     /**
      * Finds a product from 
      * stock by inserting its id
@@ -86,7 +86,7 @@ public class StockManager
         }
         return null;
     }
-    
+
     /**
      * Displays the number of
      * the amount of 
@@ -96,7 +96,7 @@ public class StockManager
     { 
         return stock.size();
     }
-    
+
     /**
      * A method that will
      * print the details of a particulat 
@@ -105,27 +105,27 @@ public class StockManager
     public void printDetails(int id)
     {
         Product product = findProduct(id);
-        
+
         if(product != null) 
         {
             System.out.println(product.toString());
         }
     }
-    
+
     /**
      * Prints all the products
      */
     public void printAllProducts()
     {
         printHeading();
-        
+
         for(Product product : stock)
         {
             System.out.println(product);
         }
         System.out.println();
     }
-    
+
     /**
      * A method to print out the heading
      */
@@ -137,5 +137,5 @@ public class StockManager
         System.out.println("====================");
         System.out.println();
     }
-    
+
 }

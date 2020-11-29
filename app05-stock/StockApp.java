@@ -87,7 +87,9 @@ public class StockApp
         
         int id = Integer.parseInt(value);
         Product product = new Product(id, name);
+        
         manager.addProduct(product);
+        
         System.out.println("\nNew Product added " + product + "\n");
     }
 
